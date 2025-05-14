@@ -1202,7 +1202,8 @@ export class ChatwootService {
       ) {
         return { message: 'bot' };
       }
-
+      console.log('Received webhook with chatId sendder identifier: ', body.conversation.meta.sender?.identifier);
+      console.log('Received webhook with chatId sendder phone number: ', body.conversation.meta.sender?.phone_number);
       const chatId =
         body.conversation.meta.sender?.identifier || body.conversation.meta.sender?.phone_number.replace('+', '');
       // Chatwoot to Whatsapp
