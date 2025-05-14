@@ -1207,6 +1207,7 @@ export class ChatwootService {
       const chatId =
         body.conversation.meta.sender?.identifier || body.conversation.meta.sender?.phone_number.replace('+', '');
       // Chatwoot to Whatsapp
+      console.log('final chat id:', chatId);
       const messageReceived = body.content
         ? body.content
             .replaceAll(/(?<!\*)\*((?!\s)([^\n*]+?)(?<!\s))\*(?!\*)/g, '_$1_') // Substitui * por _
