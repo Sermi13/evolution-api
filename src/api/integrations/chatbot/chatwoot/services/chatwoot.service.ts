@@ -1412,7 +1412,8 @@ export class ChatwootService {
               );
             } catch (error) {
               if (!messageSent && body.conversation?.id) {
-                this.onSendMessageError(instance, body.conversation?.id, error);
+                console.error('Erro está vindo daqui!!');
+                this.onSendMessageError(instance, body.conversation?.id, error); //THIS ONE
               }
               throw error;
             }
